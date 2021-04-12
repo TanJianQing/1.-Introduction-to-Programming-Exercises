@@ -1,0 +1,5 @@
+#Ask for user's name
+username=input('Tell us your name:')
+
+#Greet user
+print('hello, ',username)
