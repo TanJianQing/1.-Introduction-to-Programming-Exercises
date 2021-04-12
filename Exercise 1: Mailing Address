@@ -1,3 +1,5 @@
+#print in a mailing address format
+
 print('name')
 print('block number, street name')
 print('unit number')
