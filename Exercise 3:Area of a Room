@@ -1,0 +1,29 @@
+#Loop for checking input for unit
+loop=1
+while loop==1:
+  #Choose a unit (feet or metres)
+  unit=input('Choose a unit of measurement (feet or metres):')
+  if unit in ('feet','metres'):
+    loop=0
+  else:
+    print('Please only type feet or metres!')
+    loop=1
+
+#Ask user for length and width
+loop=1
+while loop==1:
+    try:
+        L=float(input('Length of the room:'))
+        W=float(input('Width of the room:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+        
+#Define unit of area based on chosen unit
+if unit=='feet':
+    area_unit='ft^2'
+elif unit=='metres':
+    area_unit='m^2'
+    
+#Print out area of room
+print('Area of room is ', L*W, area_unit)
