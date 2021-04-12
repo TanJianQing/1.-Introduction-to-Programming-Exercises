@@ -1,0 +1,17 @@
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        number=int(input('Please enter a positive integer:'))
+        if number>0:
+            loop=0
+        else:
+            print('Please only enter positive integers!')
+    except ValueError:
+        print('Please type in a proper number!')
+        
+#Calculate sum        
+sum=number*(number+1)/2
+
+#Print sum
+print(sum)
