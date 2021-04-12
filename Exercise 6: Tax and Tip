@@ -2,10 +2,10 @@
 loop=1
 while loop==1:
     try:
-        meal=int(input('Price of the meal:'))
+        meal=float(input('Price of the meal:'))
         loop=0
     except ValueError:
-        print('Please type in a proper number!')
+        print('Please type in a proper price!')
 
 #Calculate tax value
 tax=meal*0.07
