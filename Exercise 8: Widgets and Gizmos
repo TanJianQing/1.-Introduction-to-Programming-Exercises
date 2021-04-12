@@ -1,0 +1,17 @@
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        widgets=int(input('Please enter the number of widgets you want:'))
+        gizmos=int(input('Please enter the number of gizmos you want:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+        
+#Print number of widgets and gizmos       
+print(f'Number of widgets: {widgets}')
+print(f'Number of gizmos: {gizmos}')
+
+#Print total weight
+weight=widgets*75+gizmos*112
+print(f'The total weight is {weight} grams.')
