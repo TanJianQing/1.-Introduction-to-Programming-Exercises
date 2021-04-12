@@ -1,0 +1,16 @@
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        deposit=float(input('Please enter your deposit amount:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper amount!')
+        
+#Compute and print the amount of savings per year  
+year=1
+for i in range (0,3):
+    deposit=deposit*1.04
+    print(f'Year number: {year}')
+    print('Amount: ${:.2f}'.format(deposit))
+    year+=1
