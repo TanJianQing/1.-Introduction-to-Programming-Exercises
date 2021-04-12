@@ -1,1 +1,12 @@
-43,560
+#Ask user for length and width
+loop=1
+while loop==1:
+    try:
+        L=float(input('Length of the field in ft:'))
+        W=float(input('Width of the field in ft:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+    
+#Print out area of field
+print('Area of field is ', L*W/43560, 'acre')
