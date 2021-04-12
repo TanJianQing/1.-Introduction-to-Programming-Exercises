@@ -1,0 +1,22 @@
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        meal=int(input('Price of the meal:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+#Calculate tax value
+tax=meal*0.07
+
+#Calculate tip value
+tip=meal*0.18
+
+#Calculate total price
+total=meal+tip+tax
+
+#Print tax, tip, and total with dollar sign and in 2 decimal places
+print("Tax: ${:.2f}".format(tax))
+print("Tip: ${:.2f}".format(tip))
+print("Total: ${:.2f}".format(total))
