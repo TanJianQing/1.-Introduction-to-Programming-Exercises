@@ -1,0 +1,21 @@
+#Import necessary modules
+from math import log10
+
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        a=float(input('Please enter the first number(a):'))
+        b=float(input('Please enter the second number(b):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+        
+#Print calculations
+print(f'a + b = {a+b}')
+print(f'a - b = {a-b}')
+print(f'a x b = {a*b}')
+print(f'Quotient of a / b = {a//b}')
+print(f'Remainder of a / b = {a%b}')
+print(f'log10(a) = {log10(a)}')
+print(f'a^b = {a**b}')
