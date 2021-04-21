@@ -1,0 +1,40 @@
+# import necessary math modules
+from math import sin,cos,acos,radians
+
+#Loop to check user input for point 1
+loop=1
+print('-'*10)
+print('Point 1')
+print('-'*10)
+while loop==1:
+    try:
+        t1 = float(input('Please type in latitude in degrees:'))
+        t2 = float(input('Please type in longitude in degrees:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+#Loop to check user input for point 2
+loop=1
+print('-'*10)
+print('Point 2')
+print('-'*10)
+while loop==1:
+    try:
+        g1 = float(input('Please type in latitude in degrees:'))
+        g2 = float(input('Please type in longitude in degrees:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Convert latitude and longtitude to radians
+t1=radians(t1)
+t2=radians(t2)
+g1=radians(g1)
+g2=radians(g2)
+
+# #Calculates distance based on latitude and longtitude
+distance = 6371.01 * acos(sin(t1) * sin(t2) + cos(t1) * cos(t2) * cos(g1-g2))
+
+# #Prints distance
+print(f'Distance between the two points: {distance} km')
