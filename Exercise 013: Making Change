@@ -1,0 +1,56 @@
+# Loop to check user input for money
+loop=1
+while loop==1:
+    try:
+        money = float(input('Please type in the amount of money in dollars:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Various coins
+toonie=2.00
+loonie=1.00
+quarter=0.25
+dime=0.10
+nickle=0.05
+penny=0.01
+
+# Coin counter
+toonie_count=0
+loonie_count=0
+quarter_count=0
+dime_count=0
+nickle_count=0
+penny_count=0
+
+while money-toonie>=0:
+        money=money-toonie
+        toonie_count+=1
+
+while money-loonie>=0:
+        money=money-loonie
+        loonie_count+=1
+
+while money-quarter>=0:
+        money=money-quarter
+        quarter_count+=1
+
+while money-dime>=0:
+        money=money-dime
+        dime_count+=1
+
+while money-nickle>=0:
+        money=money-nickle
+        nickle_count+=1
+
+while money-penny>=0:
+        money=money-penny
+        penny_count+=1
+
+# Print the number of coins required for each currency
+print(f'Number of Toonies:{toonie_count}')
+print(f'Number of Loonies:{loonie_count}')
+print(f'Number of Quarters:{quarter_count}')
+print(f'Number of Dimes:{dime_count}')
+print(f'Number of Nickles:{nickle_count}')
+print(f'Number of Pennies:{penny_count}')
