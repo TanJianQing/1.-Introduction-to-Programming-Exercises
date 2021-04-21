@@ -1,0 +1,14 @@
+#Loop to check user input
+loop=1
+while loop==1:
+    try:
+        MPG = float(input("Please type the Miles per Gallon:"))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+#Calculates Litres per 100km from Miles per Gallon
+L_per_100km = MPG * 235.215
+
+#Prints output of Litres per 100km
+print(f'Equivalent Litres per 100km: {L_per_100km}')
