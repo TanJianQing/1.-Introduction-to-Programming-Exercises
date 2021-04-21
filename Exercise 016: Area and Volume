@@ -1,0 +1,19 @@
+# import necessary modules
+from math import pi
+
+# Loop to check user input for radius
+loop=1
+while loop==1:
+    try:
+        radius = float(input('Please type the radius length (in cm):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate area and volume
+area = 4 * pi * radius**2
+volume = 4/3 * pi * radius**3
+
+# Print area and volume
+print(f'Area of circle is {area} cm^2')
+print(f'Volume of sphere is {volume} cm^3')
