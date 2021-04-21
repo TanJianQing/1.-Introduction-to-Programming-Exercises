@@ -1,0 +1,19 @@
+# Loop to check user input for distance in feet
+loop=1
+while loop==1:
+    try:
+        feet = float(input('Please type your distance in feet:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Unit conversion
+inch=feet*12
+yard=feet/3
+mile=feet/5280
+
+# Print distance in various units, to 5 dp
+print(f'Your distance is:')
+print('{:.5f}'.format(inch),'inches')
+print('{:.5f}'.format(yard),'yards')
+print('{:.5f}'.format(mile),'miles')
