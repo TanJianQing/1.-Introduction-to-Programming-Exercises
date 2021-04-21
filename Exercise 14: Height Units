@@ -1,0 +1,15 @@
+# Loop to check user input for height
+loop=1
+print('Please in your height in terms of feet and inches sequentially.')
+while loop==1:
+    try:
+        feet = float(input('Number of feet:'))
+        inch = float(input('Number of inches:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# height in centimeters
+height=12*2.54*feet+2.54*inch
+
+print(f'Your height is: {height}cm')
