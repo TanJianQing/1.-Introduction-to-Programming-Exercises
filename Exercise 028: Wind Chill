@@ -1,0 +1,23 @@
+# Loop to check user input for air temperature and wind velocity
+loop=1
+while loop==1:
+    try:
+        small_loop=1
+        while small_loop==1:
+            T = float(input('Please type the air temperature (°C):'))
+            V = float(input('Please type the wind velocity (km/h):'))
+            if T<=10 and V>=4.8:
+                small_loop=0
+            elif T > 10:
+                print('This model is only accurate for air temperatures 10°C and lower!')
+            elif V<4.8:
+                print('This model is only accurate for wind velocities 4.8km/h or higher!')
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the WCI
+WCI = 13.12 + 0.6215 * T - 11.37 * V**0.16 + 0.3965 * T * V**0.16
+
+# Prints the BMI
+print('WCI: {:.0f}'.format(WCI),'°C')
