@@ -1,7 +1,7 @@
 # Import necessary modules
 from math import pi, tan
 
-# Loop to check user input for length of the sides of the triangle
+# Loop to check user input for length of polygon's sides and number of sides the polygon has
 loop=1
 while loop==1:
     try:
