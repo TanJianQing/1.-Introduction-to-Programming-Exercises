@@ -1,0 +1,18 @@
+# import necessary modules
+from math import pi
+
+# Loop to check user input for mass of water and temperature change
+loop=1
+while loop==1:
+    try:
+        radius = float(input('Please type the radius of the cylinder (in cm):'))
+        height = float(input('Please type the height of the cylinder (in cm):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the volume of the cylinder
+volume=pi * radius**2 * height
+
+# Print the volume of the cylinder to 1 d.p
+print('Volume of the cylinder: {:.1f}'.format(volume),'cm^2')
