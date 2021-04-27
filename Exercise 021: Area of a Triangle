@@ -1,0 +1,15 @@
+# Loop to check user input for pressure, volume, and temperature
+loop=1
+while loop==1:
+    try:
+        h = float(input(f'Please type the height of the triangle (in cm):'))
+        b = float(input('Please type the length of the base of the triangle (in cm):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the area of the triangle
+area = b * h / 2
+
+# Prints the area of the triangle
+print(f'Area of the triangle: {area} cm^2')
