@@ -1,0 +1,17 @@
+# Loop to check user input for length of the sides of the triangle
+loop=1
+while loop==1:
+    try:
+        s1 = float(input(f'Please type the length of the 1st side of the triangle (in cm):'))
+        s2 = float(input(f'Please type the length of the 2nd side of the triangle (in cm):'))
+        s3 = float(input(f'Please type the length of the 3rd side of the triangle (in cm):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the area of the triangle
+s = (s1 + s2 + s3) / 2
+area = ((s - s1) * (s - s2) * (s - s3))**0.5
+
+# Prints the area of the triangle to 3 d.p
+print('Area of the triangle: {:.3f}'.format(area),'cm^2')
