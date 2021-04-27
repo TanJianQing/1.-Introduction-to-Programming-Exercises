@@ -1,0 +1,22 @@
+# Loop to check user input for days, hours, minutes, seconds
+loop=1
+while loop==1:
+    try:
+        days = int(input(f"Please type the number of days:"))
+        hours = int(input(f'Please type the number of hours:'))
+        minutes = int(input(f'Please type the number of minutes:'))
+        seconds = int(input(f'Please type the number of seconds:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Converting each value to seconds
+days_to_seconds = days * 24* 60 * 60
+hours_to_seconds = hours * 60 * 60
+minutes_to_seconds = minutes * 60
+
+# Calculating the total duration in seconds
+duration = days_to_seconds + hours_to_seconds + minutes_to_seconds + seconds
+
+# Prints the total duration
+print(f'Total duration: {duration} s')
