@@ -1,0 +1,6 @@
+# Import the necessary modules
+from time import asctime
+
+# Print out current time
+print('The time now is:')
+print(asctime())
