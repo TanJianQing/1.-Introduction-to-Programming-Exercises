@@ -19,5 +19,5 @@ while loop==1:
 # Calculate the WCI
 WCI = 13.12 + 0.6215 * T - 11.37 * V**0.16 + 0.3965 * T * V**0.16
 
-# Prints the BMI
+# Prints the WCI
 print('WCI: {:.0f}'.format(WCI),'°C')
