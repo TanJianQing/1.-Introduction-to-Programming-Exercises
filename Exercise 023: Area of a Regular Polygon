@@ -1,0 +1,18 @@
+# Import necessary modules
+from math import pi, tan
+
+# Loop to check user input for length of the sides of the triangle
+loop=1
+while loop==1:
+    try:
+        s = float(input(f"Please type the length of polygon's sides (in cm):"))
+        n = float(input(f'Please type the number of sides the polygon has:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the area of the polygon
+area = (n * s**2 ) / (4 * tan(pi/n))
+
+# Prints the area of the polygon to 3 d.p
+print('Area of the polygon: {:.3f}'.format(area),'cm^2')
