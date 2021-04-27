@@ -1,0 +1,16 @@
+a=9.81
+
+# Loop to check user input for mass of water and temperature change
+loop=1
+while loop==1:
+    try:
+        d = float(input('Please type the height the object is dropped from (in m):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the final speed
+vf= (2 * a * d)**0.5
+
+# Print the volume of the cylinder to 1 d.p
+print('Final speed of the object: {:.3f}'.format(vf),'ms^-1')
