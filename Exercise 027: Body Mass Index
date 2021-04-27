@@ -1,0 +1,33 @@
+# Loop to select units
+loop=1
+while loop==1:
+    print('Option 1: Height in inches, Weight in pounds')
+    print('Option 2: Height in meters, Weight in kg')
+    option = int(input('Please select option (1/2):'))
+    if option in (1,2):
+        loop=0
+    else:
+        print('Please only type 1 or 2!')
+
+# Loop to check user input for height and weight
+loop=1
+while loop==1:
+    try:
+        if option == 1:
+            Height = float(input('Please type the height (inches):'))
+            Weight = float(input('Please type the weight (pounds):'))
+        else:
+            Height = float(input('Please type the height (metres):'))
+            Weight = float(input('Please type the weight (kg):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the BMI
+if option == 1:
+    BMI = Weight * 703 / (Height * Height)
+else:
+    BMI = Weight / (Height * Height)
+
+# Prints the BMI
+print('BMI: {:.2f}'.format(BMI))
