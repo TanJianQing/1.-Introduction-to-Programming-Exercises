@@ -1,0 +1,25 @@
+water_specific_heat_capacity=4.186
+
+# Loop to check user input for mass of water and temperature change
+loop=1
+while loop==1:
+    try:
+        water_mass = float(input('Please type the mass of water used (in grams):'))
+        temp_change = float(input('Please type the temperature difference (in °C):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Calculate the amount of energy to add or remove
+energy_J = water_mass * water_specific_heat_capacity * temp_change
+
+# Print the amount of energy to add or remove
+if energy_J > 0:
+    print(f'Amount of energy to add : {energy_J}J')
+else:
+    print(f'Amount of energy to remove : {-energy_J}J')
+
+# Show cost of heating the water
+energy_kWh= energy_J/3600000
+cost= 0.86 *energy_kWh
+print('The cost of heating the water is: ${:.2f}'.format(cost))
