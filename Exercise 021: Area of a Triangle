@@ -1,4 +1,4 @@
-# Loop to check user input for pressure, volume, and temperature
+# Loop to check user input for height and length of the base of the triangle
 loop=1
 while loop==1:
     try:
