@@ -1,0 +1,21 @@
+# Loop to check user input for number of old bread
+loop=1
+while loop==1:
+    try:
+        old_bread = int(input('Please type the number of day-old bread bought:'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper integer!')
+
+# Calculate the total original price, discount, and the new total price
+total_original = float(old_bread * 3.49)
+discount = float(total_original * 0.60)
+total_new = float(total_original - discount)
+
+print(total_original)
+print(discount)
+print(total_new)
+# Print out total original price, discount, and the new total price
+print('Original price: ${:.2f}'.format(total_original))
+print('Discount given: ${:.2f}'.format(discount))
+print('New price: ${:.2f}'.format(total_new))
