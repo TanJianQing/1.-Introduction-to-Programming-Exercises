@@ -1,0 +1,16 @@
+# Loop to check user input for temperature
+loop=1
+while loop==1:
+    try:
+        celsius = float(input('Please type the temperature (°C):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Convert the input temperature
+fahrenheit = celsius * 9/5 + 32
+kelvin = celsius+273.15
+
+# Prints the converted temperature
+print('Temperature in Fahrenheit: {:.2f}'.format(kelvin),'°F')
+print('Temperature in Kelvin: {:.2f}'.format(fahrenheit),'K')
