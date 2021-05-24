@@ -1,0 +1,20 @@
+# Loop to check user input for pressure
+loop=1
+while loop==1:
+    try:
+        kPa = float(input('Please type the pressure(kPa):'))
+        loop=0
+    except ValueError:
+        print('Please type in a proper number!')
+
+# Convert the input pressure
+atmosphere = kPa / 101325
+bar = kPa / 100000
+psi = kPa / 6895
+mmHg = kPa / 0.00029529983071445
+
+# Prints the converted temperature
+print('Pressure in standard atmosphere: {:.5f}'.format(atmosphere),'standard atmosphere')
+print('Pressure in Bar: {:.5f}'.format(bar),'Bar')
+print('Pressure in pound per square inch: {:.5f}'.format(psi),'psi')
+print('Pressure in millimeters of mercury: {:.5f}'.format(mmHg),'psi')
