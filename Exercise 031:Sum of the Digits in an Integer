@@ -1,0 +1,20 @@
+# Loop to check user input for 4-digit integer
+loop=1
+while loop==1:
+    try:
+        integer = input('Please type the 4-digit integer:')
+        if len(integer)>4:
+            print('Please only type a 4-digit integer!')
+        else:
+            # Appends integer to a list for calculation later
+            list1=[]
+            for i in range (0,4):
+                list1.append(int(integer[i]))
+
+            # Prints the calculated value
+            value=list1[0] + list1[1] + list1[2] + list1[3]
+            print(f'Sum of digits: {value}')
+            loop=0
+
+    except ValueError:
+        print('Please type in a proper number!')
